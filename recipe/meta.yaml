@@ -16,12 +16,14 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('rust') }}
-    - {{ stdlib("c") }}
     - cargo-bundle-licenses
 
 test:
+  requires:
+    - pip
   commands:
     - just --help
+    - pip check
 
 about:
   home: https://github.com/casey/just
@@ -29,7 +31,11 @@ about:
   license_file:
     - LICENSE
     - THIRDPARTY.yml
+  license_family: CC
   summary: just is a handy way to save and run project-specific commands.
+  description: just is a handy way to save and run project-specific commands.
+  doc_url: https://just.systems/
+  dev_url: https://github.com/casey/just
 
 extra:
   recipe-maintainers:
