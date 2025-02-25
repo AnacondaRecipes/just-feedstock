@@ -19,11 +19,8 @@ requirements:
     - cargo-bundle-licenses
 
 test:
-  requires:
-    - pip
   commands:
     - just --help
-    - pip check
 
 about:
   home: https://github.com/casey/just
